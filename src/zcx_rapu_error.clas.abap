@@ -1,7 +1,6 @@
 CLASS zcx_rapu_error DEFINITION
   PUBLIC
   INHERITING FROM cx_static_check
-  FINAL
   CREATE PUBLIC .
 
   PUBLIC SECTION.
@@ -10,7 +9,7 @@ CLASS zcx_rapu_error DEFINITION
       if_t100_message.
 
     CONSTANTS:
-      " Data type &1 is not supported.
+      "! Data type &1 is not supported.
       BEGIN OF data_type_not_supported,
         msgid TYPE symsgid VALUE `ZRAPU`,
         msgno TYPE symsgno VALUE `001`,
@@ -21,7 +20,7 @@ CLASS zcx_rapu_error DEFINITION
       END OF data_type_not_supported.
 
     CONSTANTS:
-      " Content with key &1 is already collected.
+      "! Content with key &1 is already collected.
       BEGIN OF content_already_collected,
         msgid TYPE symsgid VALUE `ZRAPU`,
         msgno TYPE symsgno VALUE `002`,
@@ -32,7 +31,7 @@ CLASS zcx_rapu_error DEFINITION
       END OF content_already_collected.
 
     CONSTANTS:
-      " Content with key &1 is collected to delete.
+      "! Content with key &1 is collected to delete.
       BEGIN OF content_collected_delete,
         msgid TYPE symsgid VALUE `ZRAPU`,
         msgno TYPE symsgno VALUE `003`,
@@ -41,6 +40,28 @@ CLASS zcx_rapu_error DEFINITION
         attr3 TYPE scx_attrname VALUE ``,
         attr4 TYPE scx_attrname VALUE ``,
       END OF content_collected_delete.
+
+    CONSTANTS:
+      "! Use GET method to generate class instance.
+      BEGIN OF use_get_method,
+        msgid TYPE symsgid VALUE `ZRAPU`,
+        msgno TYPE symsgno VALUE `004`,
+        attr1 TYPE scx_attrname VALUE ``,
+        attr2 TYPE scx_attrname VALUE ``,
+        attr3 TYPE scx_attrname VALUE ``,
+        attr4 TYPE scx_attrname VALUE ``,
+      END OF use_get_method.
+
+    CONSTANTS:
+      "! Error on creation of persistence object for type &
+      BEGIN OF creation_persistence_object,
+        msgid TYPE symsgid VALUE `SWB_TOOL`,
+        msgno TYPE symsgno VALUE `113`,
+        attr1 TYPE scx_attrname VALUE `TEXT1`,
+        attr2 TYPE scx_attrname VALUE ``,
+        attr3 TYPE scx_attrname VALUE ``,
+        attr4 TYPE scx_attrname VALUE ``,
+      END OF creation_persistence_object.
 
     DATA:
       text1 TYPE string,

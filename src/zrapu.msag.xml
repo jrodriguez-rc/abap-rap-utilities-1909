@@ -26,6 +26,12 @@
      <MSGNR>003</MSGNR>
      <TEXT>Content with key &amp;1 is collected to delete.</TEXT>
     </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZRAPU</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Use GET method to generate class instance.</TEXT>
+    </T100>
    </T100>
   </asx:values>
  </asx:abap>
